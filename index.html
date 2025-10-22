@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FYN - Be You. Be FYN.</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            scroll-behavior: smooth;
+
+            .nav-link.active {
+                border-bottom: 2px solid #f97316;
+                /* orange-500 */
+                color: white;
+                padding-bottom: 0.25rem;
+            }
+
+        }
+
+        /* Fade Up Animation */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            animation: fadeUp 1.2s ease forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-[#1a0b1f]/80 border-b border-orange-500/20 shadow-md">
+        <nav class="flex justify-between items-center py-2 px-8">
+            <!-- Logo + Brand -->
+            <div class="flex items-center space-x-3">
+                <img src="images/ChatGPT_Image_Oct_15__2025__03_09_20_PM-removebg-preview.png" alt="FYN Logo"
+                    class="w-14 h-14 object-contain">
+                <h1
+                    class="text-3xl font-extrabold tracking-widest text-white hover:text-orange-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,165,0,0.2)]">
+                    FYN
+                </h1>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="collection.html"
+                        class="text-gray-200 hover:text-orange-400 transition-colors duration-300">Collections</a></li>
+                <li><a href="about.html"
+                        class="text-gray-200 hover:text-orange-400 transition-colors duration-300">About</a></li>
+                <li><a href="contact.html" class="text-gray-200 hover:text-orange-400 transition-colors duration-300">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('images/fyn1.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative text-center z-10 px-4 reveal">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Be You. Be FYN.</h2>
+            <p class="text-lg md:text-xl mb-8 text-gray-200">Where individuality meets style.</p>
+            <a href="collection.html"
+                class="bg-orange-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-orange-400 transition">Explore
+                the Collection</a>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="py-20 bg-gradient-to-b from-black to-gray-900 reveal">
+        <div class="text-center mb-12">
+            <h3 class="text-4xl font-bold text-orange-500 mb-2">Collections</h3>
+            <p class="text-gray-300">Our latest drops and timeless pieces.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 px-6 md:px-16">
+            <!-- Item 1 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="images/fyn1.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <a href="#collections"
+                        class="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-orange-500 hover:text-white transition duration-300">
+                        View Drop
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="images/fyn2.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <a href="#collections"
+                        class="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-orange-500 hover:text-white transition duration-300">
+                        View Drop
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="images/fyn3.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <a href="#collections"
+                        class="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-orange-500 hover:text-white transition duration-300">
+                        View Drop
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-8 md:px-16 bg-black text-gray-200 reveal">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-bold text-orange-500 mb-6">About FYN</h3>
+                <p class="leading-relaxed mb-4">FYN embodies confidence, authenticity, and swagger. We celebrate
+                    individuality
+                    and the art of being different. Fashion, to us, is more than clothing – it's a lifestyle of
+                    expression and
+                    empowerment.</p>
+                <p class="leading-relaxed">Join the FYN movement and show the world what makes you unique. Be bold. Be
+                    confident. Be FYN.</p>
+            </div>
+            <div>
+                <img src="images/fyn2.jpg" alt="About FYN" class="rounded-2xl shadow-lg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-gray-900 to-black pt-16 pb-10 px-8 md:px-20 border-t border-orange-500 reveal">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Brand -->
+            <div>
+                <h2 class="text-3xl font-bold text-orange-500 mb-4">FYN</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    Unleash your individuality. Own your style. Be unapologetically you.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+                    <li><a href="collection.html" class="hover:text-orange-400 transition">Collections</a></li>
+                    <li><a href="about.html" class="hover:text-orange-400 transition">About</a></li>
+                    <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Socials -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                <div class="flex space-x-5">
+                    <a href="https://www.instagram.com/whoisjak3.1" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white transition transform hover:scale-110">
+                        <i
+                            class="fab fa-instagram text-black text-xl hover:text-orange-500 transition-colors duration-300"></i>
+                    </a>
+                    <a href="https://wa.me/234XXXXXXXXXX" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white transition transform hover:scale-110">
+                        <i
+                            class="fab fa-whatsapp text-black text-xl hover:text-orange-500 transition-colors duration-300"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/whoisjak3.1" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white transition transform hover:scale-110">
+                        <i
+                            class="fab fa-snapchat-ghost text-black text-xl hover:text-orange-500 transition-colors duration-300"></i>
+                    </a>
+                    <a href="mailto:adekanmbiadeyemi7@gmail.com"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white transition transform hover:scale-110">
+                        <i
+                            class="fas fa-envelope text-black text-xl hover:text-orange-500 transition-colors duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+            <p>© 2025 FYN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal Animation JS -->
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active'); // allows re-trigger on scroll
+                }
+            });
+        }, { threshold: 0.2 });
+
+        reveals.forEach(r => observer.observe(r));
+    </script>
+
+</body>
+
+</html>

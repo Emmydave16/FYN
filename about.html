@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FYN — About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --fyn-accent: #ff8a00;
+            --card-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.00));
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card-hover {
+            transition: transform .35s cubic-bezier(.2, .9, .2, 1), box-shadow .35s;
+            transform-origin: center;
+            background: var(--card-grad);
+            will-change: transform;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+        }
+
+        .overlay {
+            transition: opacity .28s ease, transform .28s ease;
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
+        .card-hover:hover .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white antialiased">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#1a0b1f]/60 border-b border-orange-500/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="./images/ChatGPT_Image_Oct_15__2025__03_09_20_PM-removebg-preview.png" alt="FYN logo"
+                    class="w-12 h-12 object-contain">
+                <span class="text-2xl font-extrabold tracking-wider text-white drop-shadow-sm">FYN</span>
+            </div>
+
+            <nav>
+                <ul class="hidden md:flex items-center gap-8 text-gray-300">
+                    <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+                    <li><a href="collection.html" class="hover:text-orange-400 transition">Collections</a></li>
+                    <li><a href="about.html"
+                            class="text-white font-semibold border-b-2 border-orange-500 pb-1">About</a></li>
+                    <li><a href="#contact" class="hover:text-orange-400 transition">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden flex items-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a0b1f]/90">
+            <ul class="flex flex-col gap-4 p-4 text-gray-300">
+                <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+                <li><a href="collection.html" class="hover:text-orange-400 transition">Collections</a></li>
+                <li><a href="about.html" class="text-white font-semibold">About</a></li>
+                <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Spacing for fixed header -->
+    <div class="h-[72px]"></div>
+
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white">About Us</h1>
+        <p class="mt-4 text-gray-300 max-w-2xl mx-auto">FYN is dedicated to bringing you exclusive style previews,
+            curated collections, and a community for fashion enthusiasts. We believe in quality, creativity, and
+            authenticity in every drop.</p>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-12 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <img src="./images/fyn1.jpg" alt="About FYN" class="w-full rounded-2xl shadow-lg">
+        </div>
+        <div>
+            <h2 class="text-3xl font-bold text-white mb-4">Our Mission</h2>
+            <p class="text-gray-300 mb-6">At FYN, our mission is to redefine the way you experience fashion online.
+                Through carefully curated collections, high-quality imagery, and intuitive browsing, we make style
+                exploration effortless and exciting.</p>
+            <h2 class="text-3xl font-bold text-white mb-4">Our Vision</h2>
+            <p class="text-gray-300">We envision a world where fashion enthusiasts can preview, explore, and engage
+                with the latest trends effortlessly, without the friction of traditional shopping. Be you. Be FYN.</p>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-12">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Meet the Team</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            <!-- Example Team Member -->
+            <div class="bg-[#1e1420] rounded-2xl overflow-hidden p-4 text-center card-hover">
+                <img src="./images/team1.jpg" alt="Team Member" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-white">John Doe</h3>
+                <p class="text-gray-400 text-sm">Founder & CEO</p>
+            </div>
+            <div class="bg-[#1e1420] rounded-2xl overflow-hidden p-4 text-center card-hover">
+                <img src="./images/team2.jpg" alt="Team Member" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-white">Jane Smith</h3>
+                <p class="text-gray-400 text-sm">Creative Director</p>
+            </div>
+            <div class="bg-[#1e1420] rounded-2xl overflow-hidden p-4 text-center card-hover">
+                <img src="./images/team3.jpg" alt="Team Member" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-white">Alice Brown</h3>
+                <p class="text-gray-400 text-sm">Marketing Lead</p>
+            </div>
+            <div class="bg-[#1e1420] rounded-2xl overflow-hidden p-4 text-center card-hover">
+                <img src="./images/team4.jpg" alt="Team Member" class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-white">Michael Lee</h3>
+                <p class="text-gray-400 text-sm">Product Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-gray-900 to-black pt-16 pb-10 px-8 md:px-20 border-t border-orange-500">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Brand -->
+            <div>
+                <h2 class="text-3xl font-bold text-orange-500 mb-4">FYN</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    Unleash your individuality. Own your style. Be unapologetically you.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+                    <li><a href="collection.html" class="hover:text-orange-400 transition">Collections</a></li>
+                    <li><a href="about.html" class="hover:text-orange-400 transition">About</a></li>
+                    <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Socials -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                <div class="flex space-x-5">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/whoisjak3.1" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:scale-110 transition transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" class="w-5 h-5">
+                            <path
+                                d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 9a3 3 0 100 6 3 3 0 000-6z" />
+                        </svg>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/234XXXXXXXXXX" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:scale-110 transition transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="black" class="w-5 h-5">
+                            <path
+                                d="M380.9 97.1C339-3.1 260.6-9.3 208.9 17.3 124 56.4 88.6 141.7 76.3 174.3c-4.3 12.5 2.9 25.9 15.3 30.2l45.3 15.6c6.2 2.1 13.1-.5 17.2-6.1 8.2-10.6 22.8-28.2 29.8-34.6 2.9-2.7 7.1-3.3 10.5-1.5l46.2 21.8c7.1 3.4 16 1.2 21.1-5.4l33.7-41.6c5.2-6.5 4.3-16-2.1-21.3z" />
+                        </svg>
+                    </a>
+                    <!-- Snapchat -->
+                    <a href="https://www.snapchat.com/add/whoisjak3.1" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:scale-110 transition transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="black" class="w-5 h-5">
+                            <path
+                                d="M398.8 162.8c-9.1-14.2-27.7-21-45.4-16.4-16.4 4.2-34.2 12.7-52.5 25.3-32.2 21.7-61.1 35-89 36.7-25.5 1.5-47.7-9.6-69.1-25-21.6-15.7-43.7-24.3-67.2-24.3-16.6 0-33.4 4.2-44.9 18.3-10.1 12.6-12 31.1-4.2 49.3 7.8 18.3 24.1 38.2 50.8 54.2 9.4 5.7 17.5 8.2 25.3 10.7 12.3 3.7 23.3 7 33.5 13.7 7.7 5.3 14.8 14.5 24.6 15.5 9.9 1.1 19.3-7.3 27.8-14.5 5.9-5 11.7-10.2 19-12.2 11-3.1 24.3.3 35.8 3.7 9.5 3 18.3 5.8 27.6 5.8 7.7 0 15-1.7 22-4.5 6.8-2.7 12.8-6.3 18.5-10.7 12-9.1 20.9-19.2 27.7-29.3 6.8-10.1 11.6-20.6 13.8-30.8 3.1-15.2-1.2-30.4-10.2-42.3z" />
+                        </svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:adekanmbiadeyemi7@gmail.com"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:scale-110 transition transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="black" class="w-5 h-5">
+                            <path
+                                d="M502.3 190.8L327.4 338.6c-13.5 11.7-34 11.7-47.5 0L9.7 190.8C3.9 186.2 0 179 0 171.3V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v91.3c0 7.7-3.9 14.9-9.7 19.5zM0 216v176c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V216l-208 180c-13.5 11.7-34 11.7-47.5 0L0 216z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 FYN. All rights reserved.</p>
+            </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
+
+</body>
+
+</html>
